@@ -45,7 +45,7 @@ Please note that Open Source Design has a [Contributor Code of Conduct](https://
   
 - Clone repo
 
-		git clone https://github.com/naveeramesh/Universty_Helper
+		git clone https://github.com/Dezenix/native-frontend-flutter.git
 
 - Get packages
 
