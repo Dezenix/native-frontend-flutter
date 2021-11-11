@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class AdminAccount extends StatefulWidget {
-  const AdminAccount({ Key? key }) : super(key: key);
+  const AdminAccount({Key? key}) : super(key: key);
 
   @override
   _AdminAccountState createState() => _AdminAccountState();
@@ -10,8 +10,6 @@ class AdminAccount extends StatefulWidget {
 class _AdminAccountState extends State<AdminAccount> {
   @override
   Widget build(BuildContext context) {
-    return Container(
-      
-    );
+    return Container();
   }
 }
