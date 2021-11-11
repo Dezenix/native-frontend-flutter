@@ -47,7 +47,7 @@ class _SigninState extends State<Signin> {
                           ),
                           hintText: "Email",
                           hintStyle: GoogleFonts.ubuntu(
-                            fontSize: 20,
+                            fontSize: 15,
                             color: Colors.grey,
                           ),
                         ),
@@ -76,7 +76,7 @@ class _SigninState extends State<Signin> {
                           ),
                           hintText: "Password",
                           hintStyle: GoogleFonts.ubuntu(
-                            fontSize: 20,
+                            fontSize: 15,
                             color: Colors.grey,
                           ),
                         ),
