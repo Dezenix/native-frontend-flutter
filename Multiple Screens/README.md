@@ -1,16 +1,5 @@
-# screens
 
-A new Flutter project.
+## Commit Guideleines
+**Follow these commit guidelines when you make a commit.**
 
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+![0_mjORfDQr7Ow_F2IX](https://user-images.githubusercontent.com/54928117/142731619-b4f7f02c-58f9-4bf0-87ef-52c21054b485.png)
