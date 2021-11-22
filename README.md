@@ -33,7 +33,7 @@ Click on the image below to set up and contribute to the project or [Click here]
 ## Way to clone and build the app:
 - Clone repo
 
-		git clone https://github.com/aryan-basu/Onepad.git
+		git clone https://github.com/Dezenix/native-frontend-flutter.git
 
 - Get packages
 
