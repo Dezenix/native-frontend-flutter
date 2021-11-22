@@ -29,6 +29,19 @@ Click on the image below to set up and contribute to the project or [Click here]
 
 [![setup](https://user-images.githubusercontent.com/79747022/138429223-9d494f25-7d32-4dce-b07e-a0fa16e020b7.png)](https://github.com/Dezenix/.github/blob/main/CONTRIBUTING.md)
 
+
+## Way to clone and build the app:
+- Clone repo
+
+		git clone https://github.com/Dezenix/native-frontend-flutter.git
+
+- Get packages
+
+		flutter pub get
+- Build app
+
+		flutter run
+
 ## 👨‍💻 Our valuable Contributors
 
 This project exists thanks to all the **people who contribute**.
