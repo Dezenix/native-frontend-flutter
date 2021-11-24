@@ -1,16 +1,16 @@
-# login01
+# Code the login screen
+Built a login Screen with minimalistic components
+## Guidelines:
+- Create new branch
 
-A new Flutter project.
+		git checkout -b add "branch name"
 
-## Getting Started
+- Do changes
+- Commit your code and the commit message should be according to the below image
 
-This project is a starting point for a Flutter application.
+![image](https://user-images.githubusercontent.com/54928117/143267424-09b93772-956e-4a75-8055-d8c433bda6aa.png)
+- Push your code to your branch
+- Create a pull request
 
-A few resources to get you started if this is your first Flutter project:
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
