@@ -1,16 +1,10 @@
-# spalsh_video
+# Spalsh Screen 
 
-A new Flutter project.
+[Guidelines](https://github.com/Dezenix/native-frontend-flutter/blob/main/Guidelines.md)
 
-## Getting Started
+**Recreate the design displayed below**
+ 
+https://user-images.githubusercontent.com/54928117/143381572-afb1d49a-11e1-43e1-ad01-f0cd06130a17.mp4
 
-This project is a starting point for a Flutter application.
 
-A few resources to get you started if this is your first Flutter project:
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
