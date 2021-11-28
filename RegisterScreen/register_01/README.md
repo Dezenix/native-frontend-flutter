@@ -8,4 +8,6 @@
 3. Choose some bright colors.
 4. Remove logo
 5. Use different font
+
+**Other then these 5 points you can also make your own changes.**
 ![Untitled design](https://user-images.githubusercontent.com/54928117/143731313-f20051e3-57a3-4120-b17d-04f7f21af154.png)
