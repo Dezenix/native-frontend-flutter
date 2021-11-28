@@ -1,4 +1,4 @@
-# Code the Hidden Drawer bar
+# Hidden Drawer bar
 
  [Guidelines](https://github.com/Dezenix/native-frontend-flutter/blob/main/Guidelines.md)
   
