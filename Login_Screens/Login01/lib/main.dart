@@ -44,7 +44,7 @@ class _LoginPageState extends State<LoginPage> {
           children: [
             const Padding(
                   padding: EdgeInsets.only(top:30 ,bottom:50 ,left:50 ,right:50 ),
-                  child: ImageAnimation("images/dezenix.png"),
+                  child: ImageAnimation("dezenix.png"),
                 ),
             Expanded(
               child: Container(
