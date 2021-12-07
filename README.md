@@ -21,6 +21,11 @@
   
 </div>
 
+
+<h2 align="center">About the Repository</h2>
+
+We are on a mission to make things easy and convenient for all the users who just want to save their time. This repository consists of all the development components that are being used while coding an end to end mobile screens in flutter. The main goal is to save your time by providing the complete code snippet with a fully responsive design of all the components that you may use in your development journey. At the later stage, the project is planned to be get converted into a library so that the components created can directly be used by importing and calling through classes. We always encourage new ideas. Feel free to get in touch with us and join our [Discord Server](https://discord.gg/F3TtF5AHKz) for updates.
+
 ## 💯open source programs this repo has been part of
 <div align="center">
 <img src="https://user-images.githubusercontent.com/79747022/144798160-551b0f37-58d4-4f59-809e-d0f5e3f437c3.png" width="120px"> 
