@@ -1,16 +1,11 @@
-# chat_screen
+## Chat Screen
 
-A new Flutter project.
+ [Guidelines](https://github.com/Dezenix/native-frontend-flutter/blob/main/Guidelines.md)
+ 
+ 1. Recreate the following design
+ 
+ <p align="center">
+  <a href="https://github.com/naveeramesh/Fake-News-Prediction">
+    <img src="https://user-images.githubusercontent.com/54928117/144965926-3b8e8e14-94c5-4092-853d-a15beb210b47.png" alt="Logo" width="300" height="700">
+  </a>
 
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
