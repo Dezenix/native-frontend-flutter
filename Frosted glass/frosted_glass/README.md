@@ -4,6 +4,6 @@
  2. Not mandatory to use the same background image
  
  <p align="center">
-  <a href="https://github.com/naveeramesh/Fake-News-Prediction">
+  <a href="#">
     <img src="https://user-images.githubusercontent.com/54928117/144170468-a9123ddf-e168-400b-9f06-c282fa3f0427.png" alt="Logo" width="300" height="600">
   </a>
