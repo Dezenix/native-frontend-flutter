@@ -76,10 +76,15 @@ class _LoginPageState extends State<LoginPage> {
                           
                         ),
                       ),
-                      TextButton(
-                            onPressed: (){}, 
-                            child: const Text("Forgot password?", style: TextStyle(color: Color.fromRGBO(23, 87, 122,1)), ),
-                          ),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.end,
+                        children: [
+                          TextButton(
+                                onPressed: (){}, 
+                                child: const Text("Forgot password?", style: TextStyle(color: Color.fromRGBO(23, 87, 122,1)), ),
+                              ),
+                        ],
+                      ),
                         SizedBox(height: 20,),
                        Padding(
                          padding: const EdgeInsets.all(20.0),
