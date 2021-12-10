@@ -3,11 +3,11 @@ import 'package:google_fonts/google_fonts.dart';
 
 class Helper {
   static Widget text(
-      String msg, int size, int spacing, Color color, FontWeight fontWeight) {
+      String msg, int size, double spacing, Color color, FontWeight fontWeight) {
     return Text(
       msg,
       textAlign: TextAlign.center,
-      style: GoogleFonts.ubuntu(
+      style: GoogleFonts.poppins(
           fontWeight: fontWeight,
           fontSize: size.toDouble(),
           color: color,
