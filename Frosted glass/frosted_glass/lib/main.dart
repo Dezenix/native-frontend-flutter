@@ -35,9 +35,11 @@ class MyHomePage extends StatelessWidget {
                 image: Image.asset("assets/design.jpg").image,
                 fit: BoxFit.cover)),
         child: Center(
-          child: FrostedGlassBox(
+          child:
+         FrostedGlassBox(
             width: contWidth,
             height: contWidth,
+           
             child: Center(
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
@@ -73,11 +75,11 @@ class FrostedGlassBox extends StatelessWidget {
   final Widget child;
 
   const FrostedGlassBox(
-      {required Key key,
+      {
       required this.width,
       required this.height,
       required this.child})
-      : super(key: key);
+      : super();
 
   @override
   Widget build(BuildContext context) {
