@@ -54,7 +54,7 @@ class _LoginPageState extends State<LoginPage> {
                   width: 50,
                 ),
                 Text(
-                  'tweak.in',
+                  'hire.in',
                   style: GoogleFonts.poppins(
                     textStyle: const TextStyle(
                         fontSize: 18,
