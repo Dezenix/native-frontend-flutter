@@ -1,6 +1,7 @@
-# anim
-
 A new Flutter project.
+
+### Screenshots
+<img src="https://user-images.githubusercontent.com/79747022/147131799-7bb8ed2a-bfeb-4eb1-872a-70191bcae54b.png" width="1000"/>
 
 ## Getting Started
 
