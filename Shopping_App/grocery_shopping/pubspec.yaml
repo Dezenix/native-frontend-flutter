@@ -1,0 +1,56 @@
+name: shop_ui
+description: A new Flutter project.
+
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: ">=2.15.1 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.2
+  hexcolor: ^2.0.5
+  flutter_svg: ^1.0.0
+  relative_scale: ^2.0.0
+  carousel_slider: ^4.0.0
+  smooth_page_indicator: ^1.0.0+2
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^1.0.0
+flutter:
+  uses-material-design: true
+
+  assets:
+    - assets/images/splash.svg
+    - assets/images/auth/top-text.svg
+    - assets/images/auth/food-bg.png
+    - assets/images/item-list/add-to-cart.svg
+    - assets/images/home-screen/location.svg
+    - assets/images/home-screen/drop-arrow.svg
+    - assets/images/home-screen/search.svg
+    - assets/images/home-screen/menu.svg
+    - assets/images/home-screen/menu-bottom.svg
+    - assets/images/home-screen/home-bottom.svg
+    - assets/images/home-screen/save-bottom.svg
+    - assets/images/home-screen/profile-bottom.svg
+    - assets/images/home-screen/fab.svg
+    - assets/images/home-screen/banner.png
+    - assets/images/cart/minus.svg
+    - assets/images/cart/add.svg
+    - assets/images/cart/stars.svg
+    - assets/images/cart/arrow.svg
+    - assets/images/cart/cart.svg
+    - assets/images/cart/fav.svg
+
+  fonts:
+    - family: Poppins
+      fonts:
+        - asset: assets/fonts/Poppins-Regular.ttf
+
+    - family: Roboto
+      fonts:
+        - asset: assets/fonts/Roboto-Regular.ttf
