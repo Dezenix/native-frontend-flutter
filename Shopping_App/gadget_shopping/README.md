@@ -1,6 +1,9 @@
-# headphones_ui
+# Shopping app UI
 
-A new Flutter project.
+A new Flutter application for gadgets purchasing.
+
+# Screenshots
+<img  src="https://user-images.githubusercontent.com/79747022/147780616-4f96b000-d876-4afd-a57d-14413ecda9e0.png" alt="screenshots"/>
 
 ## Getting Started
 
