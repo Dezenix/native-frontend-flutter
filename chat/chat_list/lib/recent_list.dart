@@ -1,19 +1,30 @@
 import 'package:flutter/material.dart';
 
 class Recent extends StatelessWidget {
-  const Recent({Key? key}) : super(key: key);
+  String username;
+  String activeTime;
+  String img;
+
+  Recent({required this.username, required this.activeTime, required this.img});
 
   @override
   Widget build(BuildContext context) {
-    return const ListTile(
+    return ListTile(
       title: Text(
-        'Username',
+        username,
         style: TextStyle(fontWeight: FontWeight.w500),
       ),
-      subtitle: Text('Active 30m ago'),
-      leading: CircleAvatar(
-        backgroundColor: Colors.indigo,
-        radius: 30,
+      subtitle: Text('Active $activeTime ago'),
+      leading: Container(
+        width: 60.0,
+        height: 60.0,
+        child: CircleAvatar(
+          backgroundImage: AssetImage("assets/images/$img"),
+          // fit: BoxFit.fill,
+        ),
+        decoration: new BoxDecoration(
+          shape: BoxShape.circle,
+        ),
       ),
       trailing: Icon(
         Icons.photo_camera_outlined,
