@@ -5,16 +5,17 @@ class ImageAnimation extends StatefulWidget {
      const ImageAnimation( this.img );
     @override
     _ImageAnimationState createState() => _ImageAnimationState();
-  }
+}
   
-  class _ImageAnimationState extends State<ImageAnimation> with SingleTickerProviderStateMixin {
-     late final AnimationController _animationController = AnimationController(vsync: this, 
+class _ImageAnimationState extends State<ImageAnimation> with SingleTickerProviderStateMixin {
+  late final AnimationController _animationController = AnimationController(vsync: this,
      duration: const Duration(seconds: 3)
-     )..repeat(reverse: true ); 
-    late final Animation<Offset> _animation = Tween(
+  )..repeat(reverse: true );
+
+  late final Animation<Offset> _animation = Tween(
       begin: Offset.zero, 
       end: const Offset(0,0.4) 
-      ).animate(CurvedAnimation(parent: _animationController, curve: Curves.bounceIn));
+  ).animate(CurvedAnimation(parent: _animationController, curve: Curves.bounceIn));
 
 
   @override
@@ -30,4 +31,4 @@ class ImageAnimation extends StatefulWidget {
          child: Image.asset(widget.img),
       );
     }
-  }
+}

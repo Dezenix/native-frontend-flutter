@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1066335751297",
+    "project_id": "dezenix-de203",
+    "storage_bucket": "dezenix-de203.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1066335751297:android:24fba209eaaba8459f9180",
+        "android_client_info": {
+          "package_name": "com.example.login01"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1066335751297-92v7vjgh7mj22fe2mgrf5jpsbor25jfb.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBLixLD0teoPaMm6HkyvJ6h8He8-yjh5UE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1066335751297-92v7vjgh7mj22fe2mgrf5jpsbor25jfb.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
