@@ -1,10 +1,12 @@
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_native_splash/flutter_native_splash.dart';
 
 import '../animations/image_animation.dart';
 import '../register_screen/register_screen.dart';
 import '../social_logins/fb_login.dart';
+import '../social_logins/google_signin.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({Key? key}) : super(key: key);
@@ -16,6 +18,8 @@ class LoginPage extends StatefulWidget {
 class _LoginPageState extends State<LoginPage> {
   @override
   Widget build(BuildContext context) {
+
+    FlutterNativeSplash.remove();
     return Scaffold(
       // ignore: avoid_unnecessary_containers
       resizeToAvoidBottomInset: false,
@@ -102,7 +106,7 @@ class _LoginPageState extends State<LoginPage> {
                       children: [
                         InkWell(
                           onTap: () async {
-                            await FacebookLoginAuth();
+                            await facebookLoginAuth();
                           },
                           child: Container(
                             color: Color(0xFF658EFF),
@@ -118,16 +122,19 @@ class _LoginPageState extends State<LoginPage> {
                           ),
                         ),
                         SizedBox(height:18),
-                        Container(
-                          color: Colors.redAccent,
-                            width:214,
-                            height:48,
-                          child: Center(
-                              child: Text("SIGN IN WITH GOOGLE",
-                              style: TextStyle(
-                                fontSize: 15,
-                                color: Colors.white
-                              ),)),
+                        InkWell(
+                          onTap :() async => await signInWithGoogle(),
+                          child: Container(
+                            color: Colors.redAccent,
+                              width:214,
+                              height:48,
+                            child: Center(
+                                child: Text("SIGN IN WITH GOOGLE",
+                                style: TextStyle(
+                                  fontSize: 15,
+                                  color: Colors.white
+                                ),)),
+                          ),
                         )
                       ],
                     ),

@@ -1,17 +1,20 @@
-import 'dart:async';
 import 'dart:ui';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_native_splash/flutter_native_splash.dart';
 import 'package:login01/register_screen/register_screen.dart';
 import 'package:login01/sign_in/login_screen.dart';
 
 void main() async {
-  WidgetsFlutterBinding.ensureInitialized();
+
+  final widgetsBinding = WidgetsFlutterBinding.ensureInitialized();
+  FlutterNativeSplash.preserve(widgetsBinding: widgetsBinding);
+
   await Firebase.initializeApp();
   runApp(
       MaterialApp(
           debugShowCheckedModeBanner: false,
-          home: SignUp()
+          home: LoginPage()
       )
   );
 }
@@ -21,6 +24,7 @@ class WelcomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    FlutterNativeSplash.remove();
     return Scaffold(
       body: Container(
           color: Colors.black,

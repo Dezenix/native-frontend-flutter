@@ -29,18 +29,20 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  firebase_auth: "^3.3.9"
-  http: ^0.13.4
-  cloud_firestore: ^3.1.10
-  flutter_login_facebook: ^1.4.1
-  flutter_facebook_auth: ^4.1.1
-  font_awesome_flutter: ^9.0.0
-  google_sign_in: ^5.0.4
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.2
+  cloud_firestore: ^3.1.10
 
+  firebase_auth: "^3.3.9"
   firebase_core: ^1.10.0
+  flutter_facebook_auth: ^4.1.1
+  flutter_login_facebook: ^1.4.1
+  flutter_native_splash: ^2.1.0
+  font_awesome_flutter: ^9.0.0
+  google_sign_in: ^5.0.4
+
+  http: ^0.13.4
 
 dev_dependencies:
   flutter_test:

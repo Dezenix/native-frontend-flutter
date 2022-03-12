@@ -13,32 +13,52 @@ enum Status {
   Cancelled
 }
 
-Future<Resource?> FacebookLoginAuth() async {
+void facebookCredentialandFirebaseInit(final loginReq) async {
+
+  final AuthCredential facebookCredential =
+  FacebookAuthProvider.credential(loginReq.accessToken!.token);
+  await FirebaseAuth.instance.signInWithCredential(facebookCredential);
+
+}
+
+Future<Resource?> facebookLoginAuth() async {
   try {
 
-    final result = await FacebookAuth.instance.login();
+    final loginReq = await FacebookAuth.instance.login();
 
-    switch (result.status) {
+    facebookCredentialandFirebaseInit(loginReq);
+
+    switch (loginReq.status) {
+
       case LoginStatus.success:
 
-        final AuthCredential facebookCredential =
-        FacebookAuthProvider.credential(result.accessToken!.token);
-        await FirebaseAuth.instance.signInWithCredential(facebookCredential);
         final userData = await FacebookAuth.instance.getUserData();
+
         print("email : ${userData['email']}");
+
         await FirebaseFirestore.instance.collection("users")
             .add(
             {'email': userData['email']}
         );
+
         return Resource(status: Status.Success);
+
       case LoginStatus.cancelled:
+
         return Resource(status: Status.Cancelled);
+
       case LoginStatus.failed:
+
         return Resource(status: Status.Error);
+
       default:
+
         return null;
+
     }
   } on FirebaseAuthException catch (e) {
+
     throw e;
+
   }
 }
