@@ -23,7 +23,7 @@ class _LoginScreenState extends State<LoginScreen> {
             padding: EdgeInsets.all(16.0),
             child: Text(
               "Log In",
-              style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
+              style: TextStyle(fontSize: 40, fontWeight: FontWeight.bold,color: Colors.redAccent),
             ),
           ),
 
@@ -62,7 +62,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 padding: EdgeInsets.all(16.0),
                 child: Text(
                   "Forget Password ?",
-                  style: TextStyle(fontWeight: FontWeight.bold, fontSize: 15),
+                  style: TextStyle(fontWeight: FontWeight.bold, fontSize: 17),
                 ),
               )),
           const SizedBox(
@@ -80,17 +80,17 @@ class _LoginScreenState extends State<LoginScreen> {
                         MaterialStateProperty.all(Colors.lightGreen),
                   ),
                   onPressed: () {},
-                  child: const Text("Log In")),
+                  child: const Text("Log In",style: TextStyle(fontSize: 20),)),
             ),
           ),
-          const SizedBox(height: 10,),
+          const SizedBox(height: 15,),
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: const [
-               Text("Don't have account?",),
+               Text("Don't have account?",style:  TextStyle(fontSize: 17)),
                Text(
                 "Sign up",
-                style:  TextStyle(color: Colors.lightGreen),
+                style:  TextStyle(color: Colors.lightGreen,fontSize: 17),
               )
             ],
           ),
