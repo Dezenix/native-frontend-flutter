@@ -6,8 +6,15 @@ import 'package:furniture_landingpg/widgets/heading_text.dart';
 import 'package:furniture_landingpg/widgets/search_bar.dart';
 import 'package:furniture_landingpg/widgets/tabs.dart';
 
-class HomePage extends StatelessWidget {
-  const HomePage({Key? key}) : super(key: key);
+class HomePage extends StatefulWidget {
+  const FeedScreen({Key? key}) : super(key: key);
+
+  @override
+  State<HomePage> createState() => _HomePageState();
+}
+
+class _HomePageState extends State<HomePage> {
+  get style => null;
 
   @override
   Widget build(BuildContext context) {
@@ -15,7 +22,29 @@ class HomePage extends StatelessWidget {
       appBar: AppBar(
         backgroundColor: Colors.white,
         elevation: 0.0,
-        title: const header(),
+        title: (
+          Container(
+               child: Text(
+                 'Home Page',
+
+                 style: GoogleFonts.comforter(
+                  textStyle: style,
+                  fontSize:35,
+                  fontWeight:FontWeight.bold,
+                 ),
+               
+               ),
+             )
+        ),
+        actions: [
+                IconButton(
+                  icon: const Icon(
+                    Icons.messenger_outline,
+                    color: primaryColor,
+                  ),
+                  onPressed: () {},
+                ),
+              ],
       ),
       body: SingleChildScrollView(
         child: Column(
