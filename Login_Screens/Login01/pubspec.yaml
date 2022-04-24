@@ -44,6 +44,10 @@ dependencies:
 
   http: ^0.13.4
 
+  pin_input_text_field: ^4.1.2
+
+  sms_autofill: ^2.2.0
+
 dev_dependencies:
   flutter_test:
     sdk: flutter
