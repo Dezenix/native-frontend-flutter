@@ -39,7 +39,6 @@ class _LoginPageState extends State<LoginPage> {
                 child:Column(
                   // ignore: prefer_const_literals_to_create_immutables
                   children:  [
-
                     TextFormField(
                       style: const TextStyle(fontSize: 20,color: Color.fromRGBO(23, 87, 122,1)),
                       keyboardType: TextInputType.text,

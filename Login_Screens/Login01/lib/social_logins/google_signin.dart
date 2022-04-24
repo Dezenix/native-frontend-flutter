@@ -16,10 +16,9 @@ Future? signInWithGoogle() async {
       accessToken: googleSignInAuthentication.accessToken,
       idToken: googleSignInAuthentication.idToken,
     );
-
+    
     try {
-      await FirebaseAuth.instance.signInWithCredential(credential);
-
+      await FirebaseAuth.instance.signInWithCredential(credential); 
     } on FirebaseAuthException catch (e) {
       if (e.code == 'account-exists-with-different-credential') {
         // handle the error here

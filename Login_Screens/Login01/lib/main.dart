@@ -1,26 +1,27 @@
-import 'dart:ui';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_native_splash/flutter_native_splash.dart';
-import 'package:login01/register_screen/register_screen.dart';
 import 'package:login01/sign_in/login_screen.dart';
+import 'package:login01/social_screens/chat_screen.dart';
+import 'package:login01/social_screens/home_screen.dart';
 
 void main() async {
-
   final widgetsBinding = WidgetsFlutterBinding.ensureInitialized();
   FlutterNativeSplash.preserve(widgetsBinding: widgetsBinding);
 
-  await Firebase.initializeApp();
+  //await Firebase.initializeApp();
   runApp(
-      MaterialApp(
+      const MaterialApp(
           debugShowCheckedModeBanner: false,
-          home: LoginPage()
+          home: HomeScreen()
       )
   );
 }
 
 class WelcomePage extends StatelessWidget {
-  final style = TextStyle(fontSize: 62, fontWeight: FontWeight.bold);
+  final style = const TextStyle(fontSize: 62, fontWeight: FontWeight.bold);
+
+  const WelcomePage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -42,8 +43,8 @@ class WelcomePage extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.center,
                   crossAxisAlignment: CrossAxisAlignment.stretch,
                   children: [
-                    SizedBox(height: 480),
-                    Text(
+                    const SizedBox(height: 480),
+                    const Text(
                       'Dezenix',
                       textAlign: TextAlign.center,
                       style: TextStyle(
@@ -51,8 +52,8 @@ class WelcomePage extends StatelessWidget {
                           fontSize: 40,
                           fontWeight: FontWeight.w600),
                     ),
-                    SizedBox(height: 5),
-                    Text(
+                    const SizedBox(height: 5),
+                    const Text(
                         '\nexperience the best social app\n with Dezenix',
                         textAlign: TextAlign.center,
                         style: TextStyle(
@@ -61,7 +62,7 @@ class WelcomePage extends StatelessWidget {
                             fontWeight: FontWeight.w300)),
                     InkWell(
                       onTap : (){
-                        Route route = MaterialPageRoute(builder: (context) => LoginPage());
+                        Route route = MaterialPageRoute(builder: (context) => const LoginPage());
                         Navigator.pushAndRemoveUntil(context, route, (route) => false);
                       },
                       child: Padding(
@@ -73,7 +74,7 @@ class WelcomePage extends StatelessWidget {
                             color: Colors.blueAccent,
                             borderRadius: BorderRadius.circular(12)
                           ),
-                          child: Center(
+                          child: const Center(
                               child: Text('Get Started',
                           style: TextStyle(
                             color: Colors.white,

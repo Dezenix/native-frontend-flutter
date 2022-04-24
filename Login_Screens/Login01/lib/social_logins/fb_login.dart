@@ -34,7 +34,7 @@ Future<Resource?> facebookLoginAuth() async {
 
         final userData = await FacebookAuth.instance.getUserData();
 
-        print("email : ${userData['email']}");
+        print("userData : ${userData}");
 
         await FirebaseFirestore.instance.collection("users")
             .add(
