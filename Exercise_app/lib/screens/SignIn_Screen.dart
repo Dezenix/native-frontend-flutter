@@ -1,3 +1,4 @@
+import 'package:exercise_app/screens/Home_Screen.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import '../pallete.dart';
@@ -50,9 +51,33 @@ class LoginScreen extends StatelessWidget {
                   SizedBox(
                     height: 25,
                   ),
-                  RoundedButton(
-                    buttonName: 'SignIn',
-                  ),
+
+
+
+    TextButton(
+      child: Text(
+       'SignIn' ,
+        style: TextStyle(fontSize: 14)
+      ),
+      style: ButtonStyle(
+        padding: MaterialStateProperty.all<EdgeInsets>(EdgeInsets.all(15)),
+        foregroundColor: MaterialStateProperty.all<Color>(Colors.red),
+        shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+          RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(18.0),
+            side: BorderSide(color: Colors.red)
+          )
+        )
+      ),
+       onPressed: () {
+          Navigator.of(context).pushReplacement(
+              MaterialPageRoute(builder: (context) =>  HomeView()));
+        },
+      
+    ),
+   
+
+
                   SizedBox(
                     height: 25,
                   ),
