@@ -1,7 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:music_player/signin.dart';
+import 'signin.dart';
+import 'home_screen.dart';
 
 class SignupPage extends StatelessWidget {
   const SignupPage({Key? key}) : super(key: key);
@@ -138,7 +139,10 @@ class SignupPage extends StatelessWidget {
                 const SizedBox(height: 20),
                 Center(
                   child: ElevatedButton(
-                    onPressed: () {},
+                  onPressed: () {
+          Navigator.of(context).pushReplacement(
+              MaterialPageRoute(builder: (context) =>  HomePage()));
+        },
                     child: Text(
                       'Sign Up',
                       // style: TextStyle(
