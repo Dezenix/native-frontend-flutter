@@ -1,3 +1,4 @@
+import 'Intrest_selection_Screen.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -33,7 +34,10 @@ class _HomeViewState extends State<HomeView> {
               Icons.interests,
               color: Colors.white,
             ),
-            onPressed: () {},
+            onPressed: () {
+          Navigator.of(context).pushReplacement(
+              MaterialPageRoute(builder: (context) =>  WorkoutScreen()));
+        },
           ),
         ],
       ),
