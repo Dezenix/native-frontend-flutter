@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:music_player/signup.dart';
+import 'home_screen.dart';
+import 'signup.dart';
+
 
 class SignIn extends StatefulWidget {
   const SignIn({Key? key}) : super(key: key);
@@ -128,7 +130,10 @@ class _SignInState extends State<SignIn> {
                 ),
                 Center(
                   child: ElevatedButton(
-                    onPressed: () {},
+                     onPressed: () {
+          Navigator.of(context).pushReplacement(
+              MaterialPageRoute(builder: (context) =>  HomePage()));
+        },
                     child: Text(
                       'Sign In',
                       // style: TextStyle(

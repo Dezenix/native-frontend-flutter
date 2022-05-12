@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:music_player/splash_screen.dart';
+
 import 'signup.dart';
 import 'signin.dart';
 
@@ -20,7 +20,7 @@ class MyApp extends StatelessWidget {
         scaffoldBackgroundColor: Colors.black,
         primarySwatch: Colors.blue,
       ),
-      home: Splash(),
+      home: SignIn(),
     );
   }
 }
