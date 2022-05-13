@@ -22,7 +22,7 @@ class WorkoutScreen extends StatelessWidget {
           },
         ),
         centerTitle: true,
-        backgroundColor: Colors.black,
+        backgroundColor: Color(0xFF40D876),
         title: (Container(
           child: Text(
             'Intrest Selection Screen',

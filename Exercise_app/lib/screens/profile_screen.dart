@@ -17,6 +17,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
     return Scaffold(
       backgroundColor: Colors.black,
       appBar: AppBar(
+         backgroundColor: Color(0xFF40D876),
         leading: IconButton(
           icon: Icon(Icons.arrow_back, color: Colors.white),
           onPressed: () {
@@ -35,7 +36,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
             ),
           ),
         )),
-        backgroundColor: Colors.black,
+    
         elevation: 0.0,
         actions: [
           CircleAvatar(
