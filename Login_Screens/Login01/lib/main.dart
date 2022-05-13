@@ -1,16 +1,102 @@
-import 'dart:async';
-import 'dart:ui';
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
-import 'package:login01/image_animation.dart';
+import 'package:flutter_native_splash/flutter_native_splash.dart';
+import 'package:login01/sign_in/login_screen.dart';
+import 'package:login01/social_screens/chat_screen.dart';
+import 'package:login01/social_screens/home_screen.dart';
 
-void main() {
-  runApp(const MyApp());
+void main() async {
+  final widgetsBinding = WidgetsFlutterBinding.ensureInitialized();
+  FlutterNativeSplash.preserve(widgetsBinding: widgetsBinding);
+
+  //await Firebase.initializeApp();
+  runApp(
+    
+      const MaterialApp(
+          debugShowCheckedModeBanner: false,
+          home: HomeScreen()
+      )
+  );
 }
+
+class WelcomePage extends StatelessWidget {
+  final style = const TextStyle(fontSize: 62, fontWeight: FontWeight.bold);
+
+  const WelcomePage({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    FlutterNativeSplash.remove();
+    return Scaffold(
+      body: Container(
+          color: Colors.black,
+          child: Stack(
+            children: [
+              Positioned.fill(
+                child: Opacity(
+                  opacity: 0.8,
+                  child:
+                  Image.asset("assets/imgs/bgimg.jpg", fit: BoxFit.cover),
+                ),
+              ),
+              Center(
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  crossAxisAlignment: CrossAxisAlignment.stretch,
+                  children: [
+                    const SizedBox(height: 480),
+                    const Text(
+                      'Dezenix',
+                      textAlign: TextAlign.center,
+                      style: TextStyle(
+                          color: Color(0xFFF9F9F9),
+                          fontSize: 40,
+                          fontWeight: FontWeight.w600),
+                    ),
+                    const SizedBox(height: 5),
+                    const Text(
+                        '\nexperience the best social app\n with Dezenix',
+                        textAlign: TextAlign.center,
+                        style: TextStyle(
+                            color: Color(0xFFF9F9F9),
+                            fontSize: 20,
+                            fontWeight: FontWeight.w300)),
+                    InkWell(
+                      onTap : (){
+                        Route route = MaterialPageRoute(builder: (context) => const LoginPage());
+                        Navigator.pushAndRemoveUntil(context, route, (route) => false);
+                      },
+                      child: Padding(
+                        padding: const EdgeInsets.fromLTRB(50, 25, 50, 50),
+                        child:
+                        Container(
+                          height:53,
+                          decoration : BoxDecoration(
+                            color: Colors.blueAccent,
+                            borderRadius: BorderRadius.circular(12)
+                          ),
+                          child: const Center(
+                              child: Text('Get Started',
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 23,
+                          ),))
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ],
+          )),
+    );
+  }
+}
+
 
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
 
- 
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
@@ -21,105 +107,6 @@ class MyApp extends StatelessWidget {
       ),
       home: const LoginPage(),
       debugShowCheckedModeBanner: false,
-    );
-  }
-}
-
-class LoginPage extends StatefulWidget {
-  const LoginPage({Key? key}) : super(key: key);
-
-  @override
-  _LoginPageState createState() => _LoginPageState();
-}
-
-class _LoginPageState extends State<LoginPage> {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-
-      // ignore: avoid_unnecessary_containers
-      resizeToAvoidBottomInset: false,
-      body: Container(
-     color: const Color.fromRGBO(23, 87, 122,1),
-        child: Column(   
-          children: [
-            const Padding(
-                  padding: EdgeInsets.only(top:30 ,bottom:50 ,left:50 ,right:50 ),
-                  child: ImageAnimation("images/dezenix.png"),
-                ),
-            Expanded(
-              child: Container(
-                decoration:  BoxDecoration(color: Colors.grey[50], borderRadius: const BorderRadius.only(topLeft: Radius.circular(50) , topRight: Radius.circular(50) )),
-                padding: const EdgeInsets.only(left: 40,top: 20,bottom: 20,right: 40),
-                child:Column(
-                  // ignore: prefer_const_literals_to_create_immutables
-                  children:  [
-                   
-                    TextFormField(
-                      style: const TextStyle(fontSize: 20,color: Color.fromRGBO(23, 87, 122,1)),
-                      keyboardType: TextInputType.text,
-                      decoration:  const InputDecoration(
-                         contentPadding: EdgeInsets.symmetric(vertical: 15,horizontal: 15),
-                        labelText: 'Username',
-                        prefixIcon: Icon(Icons.account_circle_rounded),
-                       // enabledBorder: OutlineInputBorder(borderSide: BorderSide(color: Colors.black,),),
-                      ),  
-                    ),
-                    SizedBox(height: 10,),
-                      TextFormField(
-                        style: const TextStyle(fontSize: 20,color: Color.fromRGBO(23, 87, 122,1)),
-                        keyboardType: TextInputType.text,
-                        decoration: const InputDecoration(
-                           contentPadding: EdgeInsets.symmetric(vertical: 10),
-                          labelText: 'Password',
-                          prefixIcon: Icon(Icons.lock_rounded),
-                          
-                        ),
-                      ),
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.end,
-                        children: [
-                          TextButton(
-                                onPressed: (){}, 
-                                child: const Text("Forgot password?", style: TextStyle(color: Color.fromRGBO(23, 87, 122,1)), ),
-                              ),
-                        ],
-                      ),
-                        SizedBox(height: 20,),
-                       Padding(
-                         padding: const EdgeInsets.all(20.0),
-                         child: Material(
-                           borderRadius:BorderRadius.circular(50) ,
-                           color:const Color.fromRGBO(23, 87, 122,0.85),
-                           child: InkWell(
-                              borderRadius:BorderRadius.circular(50) ,
-                             onTap: (){},
-                             splashColor: const Color.fromRGBO(128, 237, 153, 1),
-                             child: const Padding(
-                               padding: EdgeInsets.symmetric(vertical:15.0, horizontal: 100),
-                               child: Text("Log In",style: TextStyle(fontSize: 20, color: Colors.white),),
-                             ),
-                           ),
-                         ),
-                       ),
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          const Text("Don't have an account yet? "),
-                          InkWell(
-                             borderRadius:BorderRadius.circular(50),
-                            onTap: (){}, 
-                            child: const Text("Sign Up", style: TextStyle(color: Color.fromRGBO(23, 87, 122,1)), ),
-                          ),
-                        ],
-                      ),
-                  ],
-                ) ,
-              ),
-            ),
-          ],
-        ),
-      ),
     );
   }
 }
