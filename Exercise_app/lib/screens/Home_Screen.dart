@@ -16,7 +16,7 @@ class _HomeViewState extends State<HomeView> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.black,
+         backgroundColor: Color(0xFF40D876),
         centerTitle: false,
         title: (Container(
           child: Text(
