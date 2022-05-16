@@ -1,15 +1,14 @@
+import 'login.dart';
 import 'package:flutter/material.dart';
 
-import 'signup.dart';
-
-class LoginScreen extends StatefulWidget {
-  const LoginScreen({Key? key}) : super(key: key);
+class SignUpScreen extends StatefulWidget {
+  const SignUpScreen({Key? key}) : super(key: key);
 
   @override
-  State<LoginScreen> createState() => _LoginScreenState();
+  State<SignUpScreen> createState() => _SignUpScreenState();
 }
 
-class _LoginScreenState extends State<LoginScreen> {
+class _SignUpScreenState extends State<SignUpScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -23,7 +22,7 @@ class _LoginScreenState extends State<LoginScreen> {
           const Padding(
             padding: EdgeInsets.all(16.0),
             child: Text(
-              "Log In",
+              "Sign Up",
               style: TextStyle(
                   fontSize: 40,
                   fontWeight: FontWeight.bold,
@@ -38,8 +37,34 @@ class _LoginScreenState extends State<LoginScreen> {
             padding: const EdgeInsets.only(bottom: 8.0, top: 8),
             child: const TextField(
               decoration: InputDecoration(
+                icon: Icon(Icons.person),
+                hintText: 'Username',
+              ),
+            ),
+          ),
+          const SizedBox(
+            height: 15,
+          ),
+          const SizedBox(
+            width: 300,
+            child: TextField(
+              obscureText: true,
+              decoration: InputDecoration(
                 icon: Icon(Icons.email),
                 hintText: 'Email',
+              ),
+            ),
+          ),
+          const SizedBox(
+            height: 15,
+          ),
+          const SizedBox(
+            width: 300,
+            child: TextField(
+              obscureText: true,
+              decoration: InputDecoration(
+                icon: Icon(Icons.phone),
+                hintText: 'Phone Number',
               ),
             ),
           ),
@@ -59,17 +84,18 @@ class _LoginScreenState extends State<LoginScreen> {
           const SizedBox(
             height: 15,
           ),
-          const Align(
-              alignment: Alignment.center,
-              child: Padding(
-                padding: EdgeInsets.all(16.0),
-                child: Text(
-                  "Forget Password ?",
-                  style: TextStyle(fontWeight: FontWeight.bold, fontSize: 17),
-                ),
-              )),
           const SizedBox(
-            height: 25,
+            width: 300,
+            child: TextField(
+              obscureText: true,
+              decoration: InputDecoration(
+                icon: Icon(Icons.key),
+                hintText: 'Confirm Password',
+              ),
+            ),
+          ),
+          const SizedBox(
+            height: 15,
           ),
           SizedBox(
             width: 150,
@@ -84,7 +110,7 @@ class _LoginScreenState extends State<LoginScreen> {
                   ),
                   onPressed: () {},
                   child: const Text(
-                    "Log In",
+                    "Sign Up",
                     style: TextStyle(fontSize: 20),
                   )),
             ),
@@ -96,18 +122,21 @@ class _LoginScreenState extends State<LoginScreen> {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Text(
-                'Create a New Account ',
+                'Already have an account? ',
               ),
               GestureDetector(
                 onTap: () {
-                   Navigator.of(context).pushReplacement(
-              MaterialPageRoute(builder: (context) =>  SignUpScreen()));
+               Navigator.of(context).pushReplacement(
+              MaterialPageRoute(builder: (context) =>  LoginScreen()));
                 },
-                child: Text('Sign Up',
-                  style: TextStyle(
+                child: Text(
+                  'Log In',
+                   style: TextStyle(
                   fontSize: 16,
                   fontWeight: FontWeight.bold,
-                  color: Colors.redAccent),),
+                  color: Colors.redAccent),
+                  
+                ),
               ),
             ],
           ),
