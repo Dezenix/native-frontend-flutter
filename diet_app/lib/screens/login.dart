@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-
+import 'home_screen.dart';
 import 'signup.dart';
 
 class LoginScreen extends StatefulWidget {
@@ -82,7 +82,10 @@ class _LoginScreenState extends State<LoginScreen> {
                     backgroundColor:
                         MaterialStateProperty.all(Colors.lightGreen),
                   ),
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.of(context).pushReplacement(
+              MaterialPageRoute(builder: (context) =>  HomeScreen()));
+                  },
                   child: const Text(
                     "Log In",
                     style: TextStyle(fontSize: 20),
