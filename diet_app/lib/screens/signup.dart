@@ -1,3 +1,5 @@
+
+import 'home_screen.dart';
 import 'login.dart';
 import 'package:flutter/material.dart';
 
@@ -108,7 +110,10 @@ class _SignUpScreenState extends State<SignUpScreen> {
                     backgroundColor:
                         MaterialStateProperty.all(Colors.lightGreen),
                   ),
-                  onPressed: () {},
+                  onPressed: () {
+                      Navigator.of(context).pushReplacement(
+              MaterialPageRoute(builder: (context) =>  HomeScreen()));
+                  },
                   child: const Text(
                     "Sign Up",
                     style: TextStyle(fontSize: 20),
