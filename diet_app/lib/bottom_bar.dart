@@ -1,3 +1,4 @@
+import 'package:diet/screens/settings.dart';
 import 'package:flutter/material.dart';
 
 class BottomBar extends StatelessWidget {
@@ -39,7 +40,11 @@ class BottomBar extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: <Widget>[
                   Icon(Icons.search, color: Color(0xFF676E79)),
-                  Icon(Icons.settings, color: Color(0xFF676E79))
+                  IconButton(
+            icon: Icon(Icons.settings, color: Color(0xFF676E79)),
+            onPressed: () { Navigator.of(context).pushReplacement(
+              MaterialPageRoute(builder: (context) =>  SettingsOnePage()));},
+          ),
                 ],
               )
             ),
