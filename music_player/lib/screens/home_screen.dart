@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
 
-import 'albums.dart';
+
 import 'package:page_transition/page_transition.dart';
 
-import 'colors.dart';
-import 'songs_json.dart';
+import '../Theme/colors.dart';
+import '../models/albums.dart';
+import '../models/songs_json.dart';
+import '../widgets/bottombar.dart';
 
 class HomePage extends StatefulWidget {
   @override
@@ -14,17 +16,12 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   int activeMenu1 = 0;
   int activeMenu2 = 2;
+ 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: black,
-    //  appBar: getAppBar(),
-      body: getBody(),
-    );
-  }
-
-  Widget getAppBar() {
-    return AppBar(
+      appBar:  AppBar(
       backgroundColor: black,
       elevation: 0,
       title: Padding(
@@ -33,17 +30,29 @@ class _HomePageState extends State<HomePage> {
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             Text(
-              "Explore",
+              "Dezenix Spotify App",
               style: TextStyle(
                   fontSize: 20, color: white, fontWeight: FontWeight.bold),
             ),
-         
+          
           ],
         ),
       ),
+      actions: [
+                IconButton(
+                  icon: const Icon(
+                    Icons.list
+                  ),
+                  onPressed: () {},
+                ),
+              ],
+    ),
+      body: getBody(),
+     bottomNavigationBar: BottomBar(),
     );
   }
 
+  
   Widget getBody() {
     return SingleChildScrollView(
       child: Column(

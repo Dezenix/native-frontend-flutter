@@ -1,12 +1,16 @@
 import 'package:flutter/material.dart';
+import 'package:music_player/models/songs_json.dart';
 
 import 'package:page_transition/page_transition.dart';
 
-import 'music_details.dart';
-import 'package:flutter/material.dart';
+import '../Theme/colors.dart';
+import '../widgets/music_details.dart';
 
-import 'colors.dart';
-import 'songs_json.dart';
+
+
+
+
+
 
 class AlbumPage extends StatefulWidget {
   final dynamic song;

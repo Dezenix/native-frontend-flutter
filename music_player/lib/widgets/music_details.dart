@@ -1,6 +1,7 @@
 import 'dart:io';
 import 'package:flutter/material.dart';
-import 'colors.dart';
+import '../Theme/colors.dart';
+
 
 class MusicDetailPage extends StatefulWidget {
   final String title;
@@ -63,7 +64,16 @@ class _MusicDetailPageState extends State<MusicDetailPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: black,
-  //    appBar: getAppBar(),
+    appBar: AppBar(  backgroundColor: black,
+      elevation: 0,
+      actions: [
+     IconButton(
+                  icon: const Icon(
+                    Icons.more_vert,
+                  ),
+                  onPressed: () {},
+                ),
+      ],),
       body: getBody(),
     );
   }
