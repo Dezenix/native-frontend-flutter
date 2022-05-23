@@ -1,5 +1,6 @@
 
 import 'package:flutter/material.dart';
+import 'package:music_player/widgets/playing_album.dart';
 
 import '../models/albums.dart';
 import 'list.dart';
@@ -46,7 +47,11 @@ class BottomBar extends StatelessWidget {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: <Widget>[
-                  Icon(Icons.search, color: Color(0xFF676E79)),
+                  IconButton(
+            icon: Icon(Icons.play_arrow ,color: Color(0xFF676E79)),
+            onPressed: () { Navigator.of(context).pushReplacement(
+              MaterialPageRoute(builder: (context) => PlayingPage()));}
+          ),
                   IconButton(
             icon: Icon(Icons.settings, color: Color(0xFF676E79)),
             onPressed: () {}
