@@ -7,6 +7,7 @@ import '../Theme/colors.dart';
 import '../models/albums.dart';
 import '../models/songs_json.dart';
 import '../widgets/bottombar.dart';
+import '../widgets/playing_album.dart';
 
 class HomePage extends StatefulWidget {
   @override
@@ -43,7 +44,8 @@ class _HomePageState extends State<HomePage> {
                   icon: const Icon(
                     Icons.list
                   ),
-                  onPressed: () {},
+                 onPressed: () { Navigator.of(context).pushReplacement(
+              MaterialPageRoute(builder: (context) => PlayingPage()));}
                 ),
               ],
     ),
