@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:music_player/widgets/playing_album.dart';
 
 import '../models/albums.dart';
+import '../screens/Settings_Screen.dart';
 import 'list.dart';
 
 class BottomBar extends StatelessWidget {
@@ -54,7 +55,8 @@ class BottomBar extends StatelessWidget {
           ),
                   IconButton(
             icon: Icon(Icons.settings, color: Color(0xFF676E79)),
-            onPressed: () {}
+             onPressed: () { Navigator.of(context).pushReplacement(
+              MaterialPageRoute(builder: (context) => SettingsPage()));}
           ),
                 ],
               )
