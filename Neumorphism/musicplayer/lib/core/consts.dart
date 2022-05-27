@@ -8,3 +8,5 @@ class AppColors {
   static const darkBlue = Color(0XFF5880ff);
   static const lightBlueShadow = Color(0XAA92aeff);
 }
+
+
