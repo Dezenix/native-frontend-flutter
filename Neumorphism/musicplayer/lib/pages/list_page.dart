@@ -4,6 +4,8 @@ import 'package:music_player/models/music_model.dart';
 import 'package:music_player/pages/detail_page.dart';
 import 'package:music_player/widgets/custom_button.dart';
 
+import '../widgets/main_drawer.dart';
+
 class ListPage extends StatefulWidget {
   @override
   _ListPageState createState() => _ListPageState();
@@ -33,6 +35,7 @@ class _ListPageState extends State<ListPage> {
         backgroundColor: AppColors.mainColor,
       ),
       backgroundColor: AppColors.mainColor,
+       drawer: MainDrawer(),
       body: Stack(
         children: [
           Column(
