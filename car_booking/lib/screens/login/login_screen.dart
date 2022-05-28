@@ -62,7 +62,7 @@ class LoginScreen extends StatelessWidget {
                   ),
                      LoginRoundedButton(buttonName: 'SignIn',
                         onTap: () {
-                         
+                          Navigator.pushNamed(context, 'AvailableCarScreen');
                         },
                      
                      ),
@@ -83,7 +83,8 @@ class LoginScreen extends StatelessWidget {
                     style: kBodyText,
                   ),
                   GestureDetector(
-                    onTap: () {},
+                    onTap: () =>
+                        Navigator.pushNamed(context, 'CreateNewAccount'),
                     child: Text(
                       'SignUp',
                       style: kBodyText.copyWith(

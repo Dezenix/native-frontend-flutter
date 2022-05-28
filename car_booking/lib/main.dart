@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 import 'screens/login/login_screen.dart';
-
+import 'screens/signup/singup_screen.dart';
 
 
 
@@ -27,8 +27,8 @@ class MyApp extends StatelessWidget {
       initialRoute: '/',
       routes: {
         '/': (context) => LoginScreen(),
-       
-      
+        'CreateNewAccount': (context) => CreateNewAccount(),
+        
       },
     );
   }
