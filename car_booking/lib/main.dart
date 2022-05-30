@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
+import 'screens/Account/profile_screen.dart';
 import 'screens/available/available_car_screen.dart';
 import 'screens/detail/car_detail_screen.dart';
 import 'screens/login/login_screen.dart';
@@ -31,6 +32,7 @@ class MyApp extends StatelessWidget {
         '/': (context) => LoginScreen(),
         'CreateNewAccount': (context) => CreateNewAccount(),
         'AvailableCarScreen': (context) => AvailableCarScreen(),
+        'ProfileScreen': (context) => ProfileScreen(),
       },
     );
   }
