@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'dart:async';
+import 'screen/splash_screen.dart';
 import 'widget/bottom_nav_bar.dart';
 
 
@@ -17,7 +19,8 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: BottomNav(),
+      home: SplashScreen(),
     );
   }
 }
+
