@@ -18,6 +18,52 @@ class Article {
   });
 }
 
+final List<Article> trendingNews = [
+  Article(
+    category: 'Politics',
+    title: 'Eu bans 90% Russian oil imports',
+    description:
+        'With the US finding its mojo back in Europe and Russia having a tiger by the tail, there is no incentive to end the raging conflict.',
+    time: '1hr ago',
+    author: 'CNN',
+    image: 'assets/images/T1.jpeg',
+    authorImg: 'assets/images/R1.jpeg',
+  ),
+  Article(
+    category: 'Entertainment',
+    title: 'Johnny Depp makes surprise cameo',
+    description:
+        'According to The Hollywood Reporter, in multiple posts on social media and videos shared online, the actor surprised fans at a Jeff Beck concert on Sunday in England.',
+    time: '2hr ago',
+    author: 'BBC',
+    image: 'assets/images/T2.jpeg',
+    authorImg: 'assets/images/R2.jpeg',
+  ),
+  Article(
+    category: 'Sports',
+    title: 'Allyson Felix gets ready to retire',
+    description:
+        'Felix is hoping to spend more time with her daughter Camryn born in 2018, to continue advocating for female athletes, and to go on running her Saysh footwear company with her brother.',
+    time: '3hr ago',
+    author: 'SPO',
+    image: 'assets/images/T3.jpeg',
+    authorImg: 'assets/images/R3.jpeg',
+  ),
+  Article(
+    category: 'Politics',
+    title: 'India prepares to host meeting of ASEAN',
+    description:
+        'ndia has been pushing Myanmar for the restoration of democracy. At the same time, India has not boycotted the Myanmarese government or its officials.',
+    time: '1hr ago',
+    author: 'BS',
+    image: 'assets/images/T4.jpeg',
+    authorImg: 'assets/images/R4.jpeg',
+  ),
+];
+
+
+
+
 final List<Article> forYou = [
   Article(
     category: 'Sports',
