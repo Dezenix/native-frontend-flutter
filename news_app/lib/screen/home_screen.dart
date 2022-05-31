@@ -5,6 +5,8 @@ import '../model/news_data.dart';
 import '../widget/for_you.dart';
 import 'package:md2_tab_indicator/md2_tab_indicator.dart';
 
+import '../widget/trending_container.dart';
+
 class HomeScreen extends StatefulWidget {
   @override
   _HomeScreenState createState() => _HomeScreenState();
@@ -108,6 +110,22 @@ class _HomeScreenState extends State<HomeScreen> {
                 ),
               ],
             ),
+          ),
+           SizedBox(
+            height: 20,
+          ),
+          Container(
+            height: 250,
+            padding: EdgeInsets.only(left: 10),
+            child: ListView.builder(
+                itemCount: trendingNews.length,
+                scrollDirection: Axis.horizontal,
+                itemBuilder: (context, index) {
+                  Article article = trendingNews[index];
+                  return TrendingContainer(
+                    article: article,
+                  );
+                }),
           ),
           SizedBox(
             height: 20,

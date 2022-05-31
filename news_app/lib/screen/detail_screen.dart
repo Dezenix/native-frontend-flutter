@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:news_app/constants.dart';
 
 import '../model/news_data.dart';
 
@@ -16,6 +17,7 @@ class _ArticleScreenState extends State<ArticleScreen> {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
+           backgroundColor: Color(0xfff4f6f9),
         body: Stack(
           children: [
             ListView(
@@ -68,7 +70,82 @@ class _ArticleScreenState extends State<ArticleScreen> {
                           Text(
                             widget.article.time,
                             style: TextStyle(
-                              color: Colors.grey,
+                              color: kGrey1,
+                              fontSize: 20,
+                              fontWeight: FontWeight.w700,
+                            ),
+                          ),
+                        ],
+                      ),
+                      SizedBox(
+                        height: 20,
+                      ),
+                      Text(
+                        widget.article.title,
+                        style: TextStyle(
+                          color: Colors.black,
+                          fontSize: 20,
+                          fontWeight: FontWeight.w700,
+                        ),
+                      ),
+                      SizedBox(
+                        height: 20,
+                      ),
+                      Row(
+                        children: [
+                          Image.asset(
+                            widget.article.authorImg,
+                            height: 30,
+                          ),
+                        ],
+                      ),
+                      SizedBox(
+                        height: 20,
+                      ),
+                      Text(
+                        widget.article.description,
+                        style: TextStyle(
+                          color: Colors.black54,
+                          fontSize: 20,
+//                      fontWeight: FontWeight.w700,
+                        ),
+                      ),
+                    ],
+                  ),
+                )
+              ],
+            ),
+            Positioned(
+              bottom: 0,
+              left: 0,
+              right: 0,
+              child: Container(
+                decoration: BoxDecoration(
+                  color: Colors.white,
+                ),/*
+                 SizedBox(
+                  height: 10,
+                ),
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 20),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Text(
+                            widget.article.category,
+                            style: TextStyle(
+                              color: Colors.black,
+                              fontSize: 30,
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
+                          Text(
+                            widget.article.time,
+                            style: TextStyle(
+                              color: kGrey1,
                               fontSize: 20,
                               fontWeight: FontWeight.w700,
                             ),
@@ -121,6 +198,7 @@ class _ArticleScreenState extends State<ArticleScreen> {
                 decoration: BoxDecoration(
                   color: Colors.white,
                 ),
+                */
                 child: Padding(
                   padding: const EdgeInsets.all(10.0),
                   child: Row(
@@ -129,16 +207,16 @@ class _ArticleScreenState extends State<ArticleScreen> {
                       Icon(
                         Icons.arrow_back,
                         size: 30,
-                        color: Colors.black,
+                        color: kBlack,
                       ),
                       Icon(
                         Icons.share,
                         size: 30,
-                        color: Colors.black,
+                        color: kBlack,
                       ),
                       Icon(
                         Icons.arrow_forward,
-                        color: Colors.black,
+                        color: kBlack,
                         size: 30,
                       ),
                     ],
