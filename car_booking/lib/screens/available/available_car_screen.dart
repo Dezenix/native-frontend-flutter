@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 
 import '../../constants.dart';
+import '../Account/profile_screen.dart';
 import 'widget/build_container.dart';
 import 'widget/car_list_item.dart';
 
@@ -223,6 +224,15 @@ class _BuildBottomNavigationBarState extends State<BuildBottomNavigationBar> {
             onTap: (){
               setState(() {
                 selected = index;
+              Navigator.push(
+          context,
+          MaterialPageRoute(
+            builder: (context) {
+              return ProfileScreen();
+            },
+          ),
+        );
+                
               });
             },
             child: Padding(
