@@ -1,6 +1,6 @@
 <h1 align="center">Native Frontend Flutter</h1>
 
-![7](https://user-images.githubusercontent.com/79747022/151584137-d1955d23-b736-44a3-9dd6-a54d0415b58f.png)
+
 
 <div align="center">
 
@@ -56,4 +56,4 @@ Please note that Open Source Design has a [Contributor Code of Conduct](https://
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](./LICENSE) © Dezenix
 
-![t](https://user-images.githubusercontent.com/79747022/151584174-1b3ec0de-8875-4ad9-8b06-d1f20bb8773c.png)
+
